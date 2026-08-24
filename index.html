@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Dream Studio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #111;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-image: url('studio 2.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); 
+            z-index: 1;
+        }
+
+        nav {
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            z-index: 2;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 1px;
+            text-transform: lowercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:nth-child(2), nav a:nth-child(3) {
+            text-transform: none; 
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: #d4b872;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d4b872; 
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .welcome-text {
+            font-family: 'Playfair Display', serif;
+            color: #e5cc98;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 450px; 
+            filter: drop-shadow(0px 15px 25px rgba(0,0,0,0.8));
+            transition: transform 0.5s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.05); 
+        }
+
+        .subtitle {
+            color: #ddd;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            letter-spacing: 1px;
+        }
+
+        .cta-button {
+            margin-top: 40px;
+            padding: 15px 35px;
+            border: 1px solid #d4b872;
+            background: rgba(212, 184, 114, 0.1);
+            color: #e5cc98;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            backdrop-filter: blur(5px);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #d4b872;
+            color: #111;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                top: 20px;
+                left: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .welcome-text {
+                font-size: 2rem;
+            }
+            .logo {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="overlay"></div>
+        
+        <!-- LINKS CORRIGIDOS AQUI -->
+        <nav>
+            <a href="sobre.html">sobre</a>
+            <a href="projetos.html">Projetos culturais</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <div class="content" id="main-content">
+            <h2 class="welcome-text">Bem-vindo ao</h2>
+            
+            <!-- IMAGEM CORRIGIDA PARA .PNG AQUI -->
+            <img src="Logo_sem_fundo-removebg-preview.png" alt="Logo Analog Dream Studio" class="logo">
+            
+            <p class="subtitle">Um refúgio para o som autêntico e a criação musical.</p>
+            <a href="contato.html" class="cta-button">Reserve sua Gravação</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById("main-content").classList.add("visible");
+            }, 300);
+        });
+    </script>
+
+</body>
+</html>
