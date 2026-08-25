@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analog Dream Studio</title>
+    <title>Sobre | Analog Dream Studio</title>
     
     <!-- Importando as mesmas fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -17,18 +17,18 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #111; /* Mesmo fundo escuro */
+            background-color: #111; 
             color: #f1f1f1;
-            padding: 50px;
+            padding: 50px 20px; /* Adicionado padding lateral para celulares */
         }
 
-        /* Menu simples para voltar à página inicial */
         nav {
             margin-bottom: 50px;
+            text-align: center; /* Centralizado para ficar mais bonito */
         }
 
         nav a {
-            color: #d4b872; /* Tom dourado */
+            color: #d4b872; 
             text-decoration: none;
             font-size: 15px;
             letter-spacing: 1px;
@@ -41,7 +41,6 @@
             color: #fff;
         }
 
-        /* Área do seu texto */
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -55,48 +54,75 @@
             margin-bottom: 30px;
             font-style: italic;
             font-weight: 400;
+            text-align: center;
+        }
+
+        /* Estilo criado para os seus subtítulos */
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #d4b872;
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-weight: 400;
         }
         
         p {
             margin-bottom: 20px;
             color: #ccc;
+            text-align: justify; /* Alinhamento justificado para leitura fluida */
+        }
+
+        /* Estilo para vídeos e imagens ficarem responsivos (se adaptarem ao celular) */
+        .media-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        iframe, img {
+            max-width: 100%;
+            border-radius: 8px; /* Bordas arredondadas e elegantes */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Sombra suave */
         }
     </style>
 </head>
 <body>
 
-    <!-- Link para voltar para a página inicial -->
     <nav>
         <a href="index.html">← Voltar para a Home</a>
     </nav>
 
-    <!-- Aqui é onde você vai colocar o seu texto depois -->
     <div class="container">
-        <!-- ALTERE O TÍTULO ABAIXO CONFORME A PÁGINA (Sobre, Projetos Culturais, ou Contato) -->
+        
         <h1>Sobre o Analog Dream</h1>
         
-        <p>
-
-Fundado em 2021, o Analog Dream nasceu da paixão por capturar a verdadeira essência da música. Mais do que um estúdio de gravação, somos um espaço criativo dedicado a transformar ideias em produções de excelência, unindo a precisão da tecnologia contemporânea à alma inconfundível do som analógico.
-        </p>
-O Produtor
-
-   <p>À frente do estúdio está Adriano Avelar, proprietário e produtor musical, que traz em sua bagagem mais de 30 anos de vivência no mundo da música. Com uma carreira consolidada como guitarrista e produtor — e com expressiva atuação internacional —, Adriano compreende profundamente o processo de gravação sob as duas perspectivas mais importantes: a do engenheiro de som e a do músico. Essa sensibilidade permite um direcionamento técnico e artístico que extrai a melhor performance de cada projeto.
-   </p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/pk6JMO9XIDM?si=IMywTSlWgG6Ro_6m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<p> </p> 
+        <p>Fundado em 2021, o Analog Dream nasceu da paixão por capturar a verdadeira essência da música. Mais do que um estúdio de gravação, somos um espaço criativo dedicado a transformar ideias em produções de excelência, unindo a precisão da tecnologia contemporânea à alma inconfundível do som analógico.</p>
         
-Estrutura e Equipamentos
+        <!-- Os subtítulos agora estão dentro de tags <h2> -->
+        <h2>O Produtor</h2>
 
-   <p>Nosso ambiente foi cuidadosamente projetado para oferecer o mais alto padrão sonoro. O Analog Dream conta com uma infraestrutura moderna de gravação, que trabalha em perfeita harmonia com o calor do som analógico. Para garantir o timbre perfeito, nosso arsenal de estúdio inclui uma seleção primorosa de amplificadores valvulados clássicos e microfones de ponta, oferecendo a versatilidade necessária para qualquer estilo musical.
-</p> 
-        <img src="studio equip.jpg" alt="Mesa Estudio">
-Nossa Trajetória 
+        <p>À frente do estúdio está Adriano Avelar, proprietário e produtor musical, que traz em sua bagagem mais de 30 anos de vivência no mundo da música. Com uma carreira consolidada como guitarrista e produtor — e com expressiva atuação internacional —, Adriano compreende profundamente o processo de gravação sob as duas perspectivas mais importantes: a do engenheiro de som e a do músico. Essa sensibilidade permite um direcionamento técnico e artístico que extrai a melhor performance de cada projeto.</p>
+        
+        <div class="media-container">
+            <!-- Coloquei width 100% para o vídeo se adaptar a qualquer tela -->
+            <iframe width="100%" height="450" src="https://www.youtube.com/embed/pk6JMO9XIDM?si=IMywTSlWgG6Ro_6m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div> 
+        
+        <h2>Estrutura e Equipamentos</h2>
 
-<p>Em pouco tempo, o estúdio já se consolidou como palco de grandes gravações. Entre os marcos da nossa história estão as produções dos aclamados álbuns "Storm" (2022) e "Human Factor" (2024), da Loss Band. Ambos os trabalhos alcançaram forte repercussão internacional, atestando o padrão mundial de qualidade de áudio que entregamos em cada track.
+        <p>Nosso ambiente foi cuidadosamente projetado para oferecer o mais alto padrão sonoro. O Analog Dream conta com uma infraestrutura moderna de gravação, que trabalha em perfeita harmonia com o calor do som analógico. Para garantir o timbre perfeito, nosso arsenal de estúdio inclui uma seleção primorosa de amplificadores valvulados clássicos e microfones de ponta, oferecendo a versatilidade necessária para qualquer estilo musical.</p>
+        
+        <div class="media-container">
+            <!-- A sua tag img está aqui, mas agora obedece ao CSS responsivo -->
+            <img src="studio equip.jpeg" alt="Mesa Estudio">
+        </div>
 
-No Analog Dream, o seu som é tratado com o respeito e a grandiosidade que ele merece.</p>
-       
+        <h2>Nossa Trajetória</h2> 
+
+        <p>Em pouco tempo, o estúdio já se consolidou como palco de grandes gravações. Entre os marcos da nossa história estão as produções dos aclamados álbuns "Storm" (2022) e "Human Factor" (2024), da Loss Band. Ambos os trabalhos alcançaram forte repercussão internacional, atestando o padrão mundial de qualidade de áudio que entregamos em cada track.</p>
+
+        <p>No Analog Dream, o seu som é tratado com o respeito e a grandiosidade que ele merece.</p>
+        
     </div>
 
 </body>
