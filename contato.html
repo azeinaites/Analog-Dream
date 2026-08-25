@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analog Dream Studio</title>
+    <title>Contato | Analog Dream Studio</title>
     
-    <!-- Importando as mesmas fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
@@ -17,18 +16,18 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #111; /* Mesmo fundo escuro */
+            background-color: #111; 
             color: #f1f1f1;
-            padding: 50px;
+            padding: 50px 20px;
         }
 
-        /* Menu simples para voltar à página inicial */
         nav {
             margin-bottom: 50px;
+            text-align: center;
         }
 
         nav a {
-            color: #d4b872; /* Tom dourado */
+            color: #d4b872; 
             text-decoration: none;
             font-size: 15px;
             letter-spacing: 1px;
@@ -41,42 +40,137 @@
             color: #fff;
         }
 
-        /* Área do seu texto */
         .container {
-            max-width: 800px;
+            max-width: 600px; /* Mais estreito para o formulário ficar elegante */
             margin: 0 auto;
             line-height: 1.8;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 184, 114, 0.2);
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
             color: #e5cc98;
             font-size: 2.5rem;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-style: italic;
             font-weight: 400;
+            text-align: center;
         }
         
-        p {
-            margin-bottom: 20px;
+        p.desc {
+            margin-bottom: 30px;
             color: #ccc;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        /* ESTILOS DO FORMULÁRIO */
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #d4b872;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            color: #f1f1f1;
+            padding: 12px 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #d4b872;
+        }
+
+        textarea {
+            resize: vertical; /* Permite redimensionar apenas para baixo */
+        }
+
+        .cta-button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #d4b872;
+            background: rgba(212, 184, 114, 0.1);
+            color: #e5cc98;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #d4b872;
+            color: #111;
+        }
+
+        .char-counter {
+            font-size: 0.8rem;
+            color: #777;
+            text-align: right;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Link para voltar para a página inicial -->
     <nav>
         <a href="index.html">← Voltar para a Home</a>
     </nav>
 
-    <!-- Aqui é onde você vai colocar o seu texto depois -->
     <div class="container">
-        <!-- ALTERE O TÍTULO ABAIXO CONFORME A PÁGINA (Sobre, Projetos Culturais, ou Contato) -->
-        <h1>Contato</h1>
+        <h1>Entre em Contato</h1>
+        <p class="desc">Preencha os dados abaixo. Retornaremos o contato o mais breve possível.</p>
         
-        <p>Aqui você pode digitar todo o texto da página. Pode apagar isso e colocar a história do estúdio, os detalhes dos projetos ou as informações de contato.</p>
-        <p>Para criar novos parágrafos, basta usar a tag &lt;p&gt; seu texto aqui &lt;/p&gt; como neste exemplo.</p>
+        <!-- O formulário aponta para o FormSubmit usando o seu e-mail -->
+        <form action="https://formsubmit.co/adrianoavelar@outlook.com" method="POST">
+            
+            <!-- Assunto automático do e-mail -->
+            <input type="hidden" name="_subject" value="Novo contato pelo site - Analog Dream">
+            
+            <!-- Remove o captcha chato -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail para retorno:</label>
+                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem (até 1000 caracteres):</label>
+                <!-- Atributo maxlength="1000" trava a digitação no limite -->
+                <textarea id="mensagem" name="mensagem" maxlength="1000" rows="6" required placeholder="Como podemos ajudar?"></textarea>
+            </div>
+
+            <button type="submit" class="cta-button">Enviar Mensagem</button>
+        </form>
     </div>
 
 </body>
